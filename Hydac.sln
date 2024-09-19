@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1706.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydac", "Hydac\Hydac.csproj", "{7A022B19-D65B-4459-8801-E3D5A29E7850}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydac", "MenuSystem\Hydac.csproj", "{8A3146CE-1494-435B-BC73-8379BFE03F81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7A022B19-D65B-4459-8801-E3D5A29E7850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A022B19-D65B-4459-8801-E3D5A29E7850}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A022B19-D65B-4459-8801-E3D5A29E7850}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A022B19-D65B-4459-8801-E3D5A29E7850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A3146CE-1494-435B-BC73-8379BFE03F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3146CE-1494-435B-BC73-8379BFE03F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3146CE-1494-435B-BC73-8379BFE03F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3146CE-1494-435B-BC73-8379BFE03F81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {80826939-F0A8-47D6-BFF7-E96A1F20357B}
+		SolutionGuid = {B189683C-3A42-4895-91B6-00B65354510A}
 	EndGlobalSection
 EndGlobal
