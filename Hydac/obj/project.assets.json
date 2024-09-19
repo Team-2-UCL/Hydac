@@ -8,24 +8,27 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/sebastianunderlien/.nuget/packages/": {}
+    "C:\\Users\\coolm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sebastianunderlien/Desktop/Test/Hydac/Hydac/Hydac/Hydac.csproj",
+      "projectUniqueName": "C:\\Users\\coolm\\Documents\\Datamatiker\\Hydac\\Hydac\\Hydac\\Hydac.csproj",
       "projectName": "Hydac",
-      "projectPath": "/Users/sebastianunderlien/Desktop/Test/Hydac/Hydac/Hydac/Hydac.csproj",
-      "packagesPath": "/Users/sebastianunderlien/.nuget/packages/",
-      "outputPath": "/Users/sebastianunderlien/Desktop/Test/Hydac/Hydac/Hydac/obj/",
+      "projectPath": "C:\\Users\\coolm\\Documents\\Datamatiker\\Hydac\\Hydac\\Hydac\\Hydac.csproj",
+      "packagesPath": "C:\\Users\\coolm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\coolm\\Documents\\Datamatiker\\Hydac\\Hydac\\Hydac\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sebastianunderlien/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\coolm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,6 +41,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -59,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
