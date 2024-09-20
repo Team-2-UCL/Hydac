@@ -3,22 +3,26 @@ namespace Hydac;
 
 	public class Medarbejderlogin
 	{
-		public bool login(string adgangskode)
+		public string login(string adgangskode)
 		{
-        bool login = false;
-        if (adgangskode == "123")
-        {
-            login = true;
-            return login;
-        }
-        List<string> ansatte = new List<string>()
-        {
-        "John Madsen",
-        "Poul Larsen",
-        "Jens Jensen",
-        };
-        return login;
-
+		string medarbejdernavn = " ";
+		if (adgangskode == "123")
+		{
+			medarbejdernavn = "John Johnson";
+			return medarbejdernavn;
+		}
+		else if (adgangskode == "321")
+		{
+			medarbejdernavn = "Peter Petersen";
+			return medarbejdernavn;
+		}
+		else if (adgangskode == "222")
+		{
+			medarbejdernavn = "Lars Larsen";
+			return medarbejdernavn;
+		}
+		else
+			return medarbejdernavn;
 		}
 	}
 

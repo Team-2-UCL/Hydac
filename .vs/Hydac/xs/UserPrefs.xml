@@ -1,4 +1,32 @@
-﻿<Properties StartupConfiguration="{7A022B19-D65B-4459-8801-E3D5A29E7850}|Default">
+﻿<Properties StartupConfiguration="{8A3146CE-1494-435B-BC73-8379BFE03F81}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Hydac FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Projects/HydacFinalFinalFinal/HydacFinalFinalFinal/Program.cs">
+    <Files>
+      <File FileName="MenuSystem/Medarbejderlogin.cs" Line="5" Column="3" />
+      <File FileName="MenuSystem/Program.cs" Line="63" Column="79" />
+      <File FileName="MenuSystem/Medarbejderclockindud.cs" Line="4" Column="36" />
+      <File FileName="MenuSystem/Loggen.cs" Line="51" Column="14" />
+      <File FileName="../../Projects/HydacFinalFinalFinal/HydacFinalFinalFinal/Program.cs" Line="60" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Hydac" expanded="True">
+            <Node name="Hydac">
+              <Node name="Medarbejderlogin.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Hydac PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/Hydac.csproj",
+      "projectUniqueName": "/Users/sebastianunderlien/Documents/Hydac/MenuSystem/Hydac.csproj",
       "projectName": "Hydac",
-      "projectPath": "/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/Hydac.csproj",
+      "projectPath": "/Users/sebastianunderlien/Documents/Hydac/MenuSystem/Hydac.csproj",
       "packagesPath": "/Users/sebastianunderlien/.nuget/packages/",
-      "outputPath": "/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/",
+      "outputPath": "/Users/sebastianunderlien/Documents/Hydac/MenuSystem/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/sebastianunderlien/.nuget/NuGet/NuGet.Config"
