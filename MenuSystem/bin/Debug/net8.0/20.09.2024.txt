@@ -1,6 +1,6 @@
-14:30:29 Medarbejder: John Johnson er mødt ind.
-14:31:22 John Johnson har meldt sin afgang.
-14:32:48 Medarbejder: Lars Larsen er mødt ind.
-14:33:36 Lars Larsen har meldt sin afgang.
-14:33:44 Medarbejder: Peter Petersen er mødt ind.
-14:33:49 Peter Petersen har meldt sin afgang.
+18:34:51 Medarbejder: John Johnson er mødt ind.
+18:36:04 John Johnson har meldt sin afgang.
+18:36:11 Medarbejder: John Johnson er mødt ind.
+18:36:41 Medarbejder: John Johnson er mødt ind.
+18:36:52 Medarbejder: Peter Petersen er mødt ind.
+18:36:58 Peter Petersen har meldt sin afgang.

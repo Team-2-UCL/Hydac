@@ -1,5 +1,4 @@
-﻿using System;
-namespace Hydac;
+﻿namespace Hydac;
 
 	public class Medarbejderlogin
 	{

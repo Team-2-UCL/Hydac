@@ -1,6 +1,6 @@
-﻿using System;
+﻿using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Hydac
 {
@@ -91,6 +91,33 @@ namespace Hydac
             }
             return erankommet;
         }
-	}
+        public string hentloggen() // Funktionen der henter loggen når den skal ses
+        {
+            DateTime dateAndTime = DateTime.Now;
+            string dato = dateAndTime.ToString("dd.MM.yyyy");
+            string fileName = $"{Environment.CurrentDirectory}/" + dato + ".txt";
+            FileInfo fileInfo = new FileInfo($"{Environment.CurrentDirectory}/" + dato + ".txt");
+            bool exists = fileInfo.Exists;
+            if (exists == false)
+                using (FileStream fs = File.Create(fileName)) ;
+            Console.Clear();
+            using (FileStream fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.None))
+            {
+                byte[] b = new byte[1024];
+                UTF8Encoding temp = new UTF8Encoding(true);
+
+                if (fs.Read(b, 0, b.Length) > 0)
+                {
+                    string loggen = "Loggen for dato: " + dato + "\n\n" + temp.GetString(b) + "\n\nTryk enter for at gå tilbage.";
+                    return loggen;
+                }
+                else
+                {
+                    string tomlog = "Loggen for dato: " + dato + "\n\nLOGGEN ER TOM.\n\nTryk enter for at gå tilbage.";
+                    return tomlog;
+                }
+            }
+        }
+    }
 }
 

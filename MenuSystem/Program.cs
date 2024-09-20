@@ -18,14 +18,14 @@ class Program
         while (startmenu == true)
         {
             Console.Clear();
-            Console.WriteLine("Vælg om du er en gæst eller medarbejder.\n\n1. Medarbejder \n2. Gæst\n\n(Tag et vælg eller indtast 0 for at slutte.");
+            Console.WriteLine("Vælg om du er en gæst eller medarbejder.\n\n1. Medarbejder \n2. Gæst\n\n(Tag et vælg eller indtast 0 for at afslutte.)");
             valg1 = Console.ReadLine();
             switch (valg1)
             {
                 case "1": //Medarbejder login
                     Medarbejderlogin medarbejderlogininstans = new Medarbejderlogin();
                     Console.Clear();
-                    Console.WriteLine("MEDARBEJDER LOGIN\n\nIndtast din adgangskode...");
+                    Console.Write("MEDARBEJDER LOGIN\n\nIndtast din adgangskode...");
                     medarbejdernavn = medarbejderlogininstans.login(Console.ReadLine());
                     if (medarbejdernavn == " ") // Hvis koden er forkert
                     {
@@ -42,6 +42,9 @@ class Program
                     }
                 case "2": //Gæste login
                     startmenu = false;
+                    break;
+                case "0":
+                    Environment.Exit(0);
                     break;
                 default: //Forkert input
                     break;
@@ -73,7 +76,6 @@ class Program
                                     case "y":
                                         medarbejdermenu2 = false;
                                         medarbejderstatusinstans.loggen(medarbejdernavn, 1);
-                                        Main();
                                         break;
                                     case "n":
                                         medarbejdermenu2 = false;
@@ -97,7 +99,6 @@ class Program
                                     case "y":
                                         medarbejdermenu2 = false;
                                         medarbejderstatusinstans.loggen(medarbejdernavn, 1);
-                                        Main();
                                         break;
                                     case "n":
                                         medarbejdermenu2 = false;
@@ -110,6 +111,11 @@ class Program
                         }
                         break;
                     case "2": //Se loggen
+                        Console.Clear();
+                        Loggen loghent = new Loggen();
+                        string logfil = loghent.hentloggen();
+                        Console.WriteLine(logfil);
+                        Console.Read();
                         break;
                     case "3": //Log ud
                         Main();
@@ -124,7 +130,20 @@ class Program
             guestmenu = true;
             while (guestmenu == true)
             {
-
+                Console.Clear();
+                Console.WriteLine("GÆSTE MENUEN\n\n1. Meld din ankomst\n2. Meld afgang\n\n(Tryk enter for at gå tilbage igen)");
+                valg1 = Console.ReadLine();
+                switch (valg1)
+                {
+                    case "1":
+                        Console.Clear();
+                        break;
+                    case "2":
+                        break;
+                    default:
+                        Main();
+                        break;
+                }
             }
         }
     }
