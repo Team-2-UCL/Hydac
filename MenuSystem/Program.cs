@@ -27,14 +27,14 @@ class Program
                     Console.Clear();
                     Console.WriteLine("MEDARBEJDER LOGIN\n\nIndtast din adgangskode...");
                     medarbejdernavn = medarbejderlogininstans.login(Console.ReadLine());
-                    if (medarbejdernavn == " ")
+                    if (medarbejdernavn == " ") // Hvis koden er forkert
                     {
                         Console.Clear();
                         Console.WriteLine("Forkert adgangskode.\n\n(Tryk enter for at gå tilbage)");
                         Console.Read();
                         break;
                     }
-                    else
+                    else // Hvis koden er korrekt
                     {
                         medarbejderlogin = true;
                         startmenu = false;
@@ -47,7 +47,7 @@ class Program
                     break;
             }
         }
-        if (medarbejderlogin == true)
+        if (medarbejderlogin == true) // Åbner medarbejder menuen
         {
             medarbejdermenu = true;
             while (medarbejdermenu == true)
@@ -61,7 +61,7 @@ class Program
                         Loggen medarbejderstatusinstans = new Loggen();
                         Console.Clear();
                         erclocketind = medarbejderstatusinstans.loggen(medarbejdernavn, 0);
-                        if (erclocketind == true)
+                        if (erclocketind == true) // Clock ind koden
                         {
                             bool medarbejdermenu2 = true;
                             while (medarbejdermenu2 == true)
@@ -84,7 +84,7 @@ class Program
                                 }
                             }
                         }
-                        else
+                        else // Clock ud koden
                         {
                             bool medarbejdermenu2 = true;
                             while (medarbejdermenu2 == true)
@@ -119,7 +119,7 @@ class Program
                 }
             }
         }
-        else
+        else // Åbner gæstemenuen
         {
             guestmenu = true;
             while (guestmenu == true)

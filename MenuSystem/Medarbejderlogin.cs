@@ -3,7 +3,7 @@ namespace Hydac;
 
 	public class Medarbejderlogin
 	{
-		public string login(string adgangskode)
+		public string login(string adgangskode) // Tager en adgangskode som argument og returnere navnet tilsvarende til adgangskoden
 		{
 		string medarbejdernavn = " ";
 		if (adgangskode == "123")

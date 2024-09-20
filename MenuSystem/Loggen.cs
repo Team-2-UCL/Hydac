@@ -6,7 +6,7 @@ namespace Hydac
 {
     public class Loggen
     {
-        public bool loggen(string input, int valg)
+        public bool loggen(string input, int valg) // Tager et navn og et tal som argument og returnere en bool
 		{
             bool erankommet = false;
             DateTime dateAndTime = DateTime.Now;
@@ -49,7 +49,7 @@ namespace Hydac
             var gæsteliste = ankommedeliste.Except(afgangliste).ToList();
             var medarbejderliste = ankommedarbejdliste.Except(afgangliste).ToList();
 
-            if (valg == 0)
+            if (valg == 0) // Checker kun om personen er clocket ind eller ud
             {
                 foreach (string line in medarbejderliste)
                 {
@@ -69,7 +69,7 @@ namespace Hydac
                 }
                 return erankommet;
             }
-            else if (valg == 1)
+            else if (valg == 1) // Udfører en clock ind eller ud handling
             {
                 bool ankommet = false;
                 foreach (string line in medarbejderliste)
