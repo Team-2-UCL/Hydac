@@ -1,0 +1,14 @@
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.AssemblyInfoInputs.cache
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.AssemblyInfo.cs
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.csproj.CoreCompileInputs.cache
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/bin/Debug/net8.0/Hydac
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/bin/Debug/net8.0/Hydac.deps.json
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/bin/Debug/net8.0/Hydac.runtimeconfig.json
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/bin/Debug/net8.0/Hydac.dll
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/bin/Debug/net8.0/Hydac.pdb
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.dll
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/refint/Hydac.dll
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.pdb
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/Hydac.genruntimeconfig.cache
+/Users/sebastianunderlien/Projects/MenuSystem/MenuSystem/obj/Debug/net8.0/ref/Hydac.dll

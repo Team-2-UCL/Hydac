@@ -1,10 +1,11 @@
-﻿namespace MenuSystem;
+﻿namespace Hydac;
 
 class Program
 {
     static void Main(string[] args)
     {
         Menu mainMenu = new Menu();
+        Medarbejderlogin medarbejderlogin = new Medarbejderlogin();
 
         mainMenu.Title = "Vælg om du er en medarbejder";
         mainMenu.menuItems = new MenuItem[10];
@@ -36,7 +37,11 @@ class Program
                     }
                     if (valg == 1)
                     {
-                        Console.WriteLine("hej");
+                        Console.Clear();
+                        Console.WriteLine("Medarbejder login. Indtast din kode:");
+                        string adgangskode = Console.ReadLine();
+                        bool loginsuccess = medarbejderlogin.login(adgangskode);
+                        Console.WriteLine($"Logget ind: {loginsuccess}");
                         Console.ReadLine();
                     }
                     break;

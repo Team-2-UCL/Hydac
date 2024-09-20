@@ -1,14 +1,13 @@
 ﻿using System;
-namespace MenuSystem
+namespace Hydac;
+
+public class MenuItem
 {
-	public class MenuItem
-	{
 
         public string Title { get; set; }
 
         public MenuItem()
-		{
-		}
+	{
 	}
 }
 
