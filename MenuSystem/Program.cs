@@ -1,4 +1,7 @@
-﻿namespace Hydac;
+﻿using System;
+using System.Runtime.CompilerServices;
+
+namespace Hydac;
 
 class Program
 {
@@ -12,8 +15,8 @@ class Program
         bool medarbejdermenu = false;
         bool guestmenu = false;
         bool erclocketind = false;
-
-
+        string person = "";
+        int counter = 1;
 
         while (startmenu == true)
         {
@@ -130,6 +133,7 @@ class Program
             guestmenu = true;
             while (guestmenu == true)
             {
+                Loggen guesttillog = new Loggen();
                 Console.Clear();
                 Console.WriteLine("GÆSTE MENUEN\n\n1. Meld din ankomst\n2. Meld afgang\n\n(Tryk enter for at gå tilbage igen)");
                 valg1 = Console.ReadLine();
@@ -137,8 +141,69 @@ class Program
                 {
                     case "1":
                         Console.Clear();
+                        Console.WriteLine("Meld ankomst\n\nIndtast dit fulde navn.\n\n(Tryk enter for at gå tilbage)");
+                        person = Console.ReadLine();
+                        if (person == "")
+                            break;
+                        if (person == " ")
+                            break;
+                        Console.Clear();
+                        Console.WriteLine("Meld ankomst\n\nHvilket firma besøger du fra?");
+                        string firma = Console.ReadLine();
+                        Console.Clear();
+                        Console.WriteLine("Meld ankomst\n\nHvem var ansvarlig for dit besøg?");
+                        string ansvarlig = Console.ReadLine();
+                        guesttillog.guest($"Navn: {person} fra firma: {firma} Ansvarlig for besøg: {ansvarlig}", 1);
+                        Console.Clear();
+                        Console.WriteLine("Din ankomst er registreret.\nFra Firma: {0}\nAnsvarlig for besøg: {1}\n\nTryk enter for at gå tilbage.", firma, ansvarlig);
+                        Console.ReadLine();
                         break;
                     case "2":
+                        Console.Clear();
+                        string gæster = guesttillog.guest("", 0);
+                        List<string> gæsteliste = gæster.Split(new char[] { ',' }).ToList();
+                        counter = 1;
+                        if (gæsteliste[0] == "")
+                        {
+                            Console.WriteLine("Der er pt ingen gæster der kan melde sin afgang...\n\n(Tryk enter for at gå tilbage)");
+                            Console.Read();
+                            break;
+                        }
+                        Console.WriteLine("Meld afgang - Vælg dit navn\n");
+                        foreach (var l in gæsteliste)
+                        {
+                            Console.WriteLine($"{counter}. {l}");
+                            counter++;
+                        }
+                        Console.WriteLine("\n(Tryk enter for at gå tilbage)");
+                        try
+                        {
+                            int valgafgæst = int.Parse(Console.ReadLine());
+                            string gæsten = gæsteliste[valgafgæst - 1];
+                            Console.Clear();
+                            Console.WriteLine($"Du har valgt: {gæsten}\n\nBekræft med (y/n)");
+                            valg1 = Console.ReadLine();
+                            switch (valg1)
+                            {
+                                case "y":
+                                    guesttillog.guest(gæsten, 2);
+                                    Console.Clear();
+                                    Console.WriteLine($"Din afgang for: {gæsten} er blevet registreret.");
+                                    Thread.Sleep(1500);
+                                    Main();
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        catch (FormatException)
+                        {
+                            break;
+                        }
+                        catch (ArgumentOutOfRangeException)
+                        {
+                            break;
+                        }
                         break;
                     default:
                         Main();
