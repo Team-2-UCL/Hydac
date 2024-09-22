@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -118,6 +119,10 @@ namespace Hydac
             DateTime dateAndTime = DateTime.Now;
             string dato = dateAndTime.ToString("dd.MM.yyyy");
             string fileName = $"{Environment.CurrentDirectory}/" + dato + ".txt";
+            FileInfo fileInfo = new FileInfo($"{Environment.CurrentDirectory}/" + dato + ".txt");
+            bool exists = fileInfo.Exists;
+            if (exists == false)
+                using (FileStream fs = File.Create(fileName)) ;
 
             foreach (var line in File.ReadLines(fileName)) // Laver listen over gæster der har meldt sin ankomst
             {

@@ -67,7 +67,7 @@ class Program
                         Loggen medarbejderstatusinstans = new Loggen();
                         Console.Clear();
                         erclocketind = medarbejderstatusinstans.loggen(medarbejdernavn, 0);
-                        if (erclocketind == true) // Clock ind koden
+                        if (erclocketind == true) // Clock ud koden
                         {
                             bool medarbejdermenu2 = true;
                             while (medarbejdermenu2 == true)
@@ -89,7 +89,7 @@ class Program
                                 }
                             }
                         }
-                        else // Clock ud koden
+                        else // Clock ind koden
                         {
                             bool medarbejdermenu2 = true;
                             while (medarbejdermenu2 == true)
@@ -139,7 +139,7 @@ class Program
                 valg1 = Console.ReadLine();
                 switch (valg1)
                 {
-                    case "1":
+                    case "1": // Gæst melder ankomst
                         Console.Clear();
                         Console.WriteLine("Meld ankomst\n\nIndtast dit fulde navn.\n\n(Tryk enter for at gå tilbage)");
                         person = Console.ReadLine();
@@ -158,7 +158,7 @@ class Program
                         Console.WriteLine("Din ankomst er registreret.\nFra Firma: {0}\nAnsvarlig for besøg: {1}\n\nTryk enter for at gå tilbage.", firma, ansvarlig);
                         Console.ReadLine();
                         break;
-                    case "2":
+                    case "2": // Gæst melder afgang
                         Console.Clear();
                         string gæster = guesttillog.guest("", 0);
                         List<string> gæsteliste = gæster.Split(new char[] { ',' }).ToList();
@@ -205,7 +205,7 @@ class Program
                             break;
                         }
                         break;
-                    default:
+                    default: // Trykker enter for at gå tilbage
                         Main();
                         break;
                 }

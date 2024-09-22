@@ -1,22 +1,18 @@
 ﻿<Properties StartupConfiguration="{8A3146CE-1494-435B-BC73-8379BFE03F81}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Hydac PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MenuSystem/Loggen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MenuSystem/Medarbejderlogin.cs">
     <Files>
-      <File FileName="MenuSystem/Medarbejderlogin.cs" Line="3" Column="1" />
-      <File FileName="MenuSystem/Loggen.cs" Line="20" Column="1" />
-      <File FileName="MenuSystem/Program.cs" Line="63" Column="92" />
-      <File FileName="../../Projects/HydacFinalFinalFinal/HydacFinalFinalFinal/Program.cs" Line="95" Column="25" />
+      <File FileName="MenuSystem/Medarbejderlogin.cs" Line="10" Column="37" />
+      <File FileName="MenuSystem/Loggen.cs" Line="98" Column="32" />
+      <File FileName="MenuSystem/Program.cs" Line="15" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Hydac">
-            <Node name="Hydac" expanded="True" />
+            <Node name="Hydac">
+              <Node name="Medarbejderlogin.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -25,5 +21,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
