@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{4D56E1A3-F4CF-4B92-93B4-7D8E9FBF763C}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.HydacFinalFR PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HydacFinalFR/Login.cs">
+    <Files>
+      <File FileName="HydacFinalFR/Postloginmedarbejder.cs" Line="9" Column="36" />
+      <File FileName="HydacFinalFR/Postlogingæst.cs" Line="14" Column="53" />
+      <File FileName="HydacFinalFR/Login.cs" Line="38" Column="23" />
+      <File FileName="HydacFinalFR/Program.cs" Line="12" Column="55" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HydacFinalFR">
+            <Node name="HydacFinalFR">
+              <Node name="Login.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

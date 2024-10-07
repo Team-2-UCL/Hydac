@@ -7,10 +7,11 @@ namespace HydacFinalFR
 		private bool loginmenu = true;
         private string medarbejdernavn = "";
 
+		// Initialiseringer
+		Postloginmedarbejder medarbejdermenu = new Postloginmedarbejder();
+
 		public void Medarbejdermenulogin()
 		{
-            //Initialiseringer
-            Postloginmedarbejder medarbejdermenu = new Postloginmedarbejder();
 
             loginmenu = true;
 			while (loginmenu == true)

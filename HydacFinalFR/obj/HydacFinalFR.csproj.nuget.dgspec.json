@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sebastianunderlien/Projects/HydacFinalFR/HydacFinalFR/HydacFinalFR.csproj": {}
+    "/Users/sebastianunderlien/Documents/Hydac/HydacFinalFR/HydacFinalFR.csproj": {}
   },
   "projects": {
-    "/Users/sebastianunderlien/Projects/HydacFinalFR/HydacFinalFR/HydacFinalFR.csproj": {
+    "/Users/sebastianunderlien/Documents/Hydac/HydacFinalFR/HydacFinalFR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sebastianunderlien/Projects/HydacFinalFR/HydacFinalFR/HydacFinalFR.csproj",
+        "projectUniqueName": "/Users/sebastianunderlien/Documents/Hydac/HydacFinalFR/HydacFinalFR.csproj",
         "projectName": "HydacFinalFR",
-        "projectPath": "/Users/sebastianunderlien/Projects/HydacFinalFR/HydacFinalFR/HydacFinalFR.csproj",
+        "projectPath": "/Users/sebastianunderlien/Documents/Hydac/HydacFinalFR/HydacFinalFR.csproj",
         "packagesPath": "/Users/sebastianunderlien/.nuget/packages/",
-        "outputPath": "/Users/sebastianunderlien/Projects/HydacFinalFR/HydacFinalFR/obj/",
+        "outputPath": "/Users/sebastianunderlien/Documents/Hydac/HydacFinalFR/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sebastianunderlien/.nuget/NuGet/NuGet.Config"
