@@ -2,19 +2,20 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.HydacFinalFR PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HydacFinalFR/Login.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HydacFinalFR/Postloginmedarbejder.cs">
     <Files>
-      <File FileName="HydacFinalFR/Postloginmedarbejder.cs" Line="9" Column="36" />
-      <File FileName="HydacFinalFR/Postlogingæst.cs" Line="14" Column="53" />
-      <File FileName="HydacFinalFR/Login.cs" Line="38" Column="23" />
+      <File FileName="HydacFinalFR/Postloginmedarbejder.cs" Line="119" Column="39" />
+      <File FileName="HydacFinalFR/Postlogingæst.cs" />
+      <File FileName="HydacFinalFR/Login.cs" />
       <File FileName="HydacFinalFR/Program.cs" Line="12" Column="55" />
+      <File FileName="HydacFinalFR/Log.cs" Line="10" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HydacFinalFR">
-            <Node name="HydacFinalFR">
-              <Node name="Login.cs" selected="True" />
+            <Node name="HydacFinalFR" expanded="True">
+              <Node name="Postloginmedarbejder.cs" selected="True" />
             </Node>
           </Node>
         </State>

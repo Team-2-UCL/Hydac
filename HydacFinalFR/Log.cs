@@ -10,12 +10,12 @@ namespace HydacFinalFR
         private string dato = DateTime.Now.ToString("dd.MM.yyyy");
         private string loggen;
 
-        public void Gemtillog(string logbesked)
+        public void Gemtillog(string logBesked)
         {
 
             FileInfo fileInfo = new FileInfo($"{Environment.CurrentDirectory}/" + dato + ".txt");
             string fileName = $"{Environment.CurrentDirectory}/" + dato + ".txt";
-            File.AppendAllText(fileName, DateTime.Now.ToString("HH:mm:ss ") + logbesked + Environment.NewLine);
+            File.AppendAllText(fileName, DateTime.Now.ToString("HH:mm:ss ") + logBesked + Environment.NewLine);
         }
         public void Tjeklogfindes()
 		{
@@ -35,12 +35,12 @@ namespace HydacFinalFR
                 UTF8Encoding temp = new UTF8Encoding(true);
                 if (fs.Read(b, 0, b.Length) > 0)
                 {
-                    loggen = "Loggen for dato: " + dato + "\n\n" + temp.GetString(b) + "\n\nTryk enter for at gå tilbage.";
+                    loggen = "Loggen for dato: " + dato + "\n\n" + temp.GetString(b) + "\n\n(Tryk enter for at gå tilbage)";
                     return loggen;
                 }
                 else
                 {
-                    loggen = "Loggen for dato: " + dato + "\n\nLOGGEN ER TOM.\n\nTryk enter for at gå tilbage.";
+                    loggen = "Loggen for dato: " + dato + "\n\nLOGGEN ER TOM.\n\n(Tryk enter for at gå tilbage)";
                     return loggen;
                 }
             }

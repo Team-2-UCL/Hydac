@@ -17,7 +17,7 @@ class Program
         while (hovedmenu == true)
         {
             Console.Clear();
-            Console.WriteLine("Vælg om du er en gæst eller medarbejder\n\n1. Medarbejder\n2. Gæst");
+            Console.WriteLine("Velkommen - vælg om du er medarbejder eller gæst\n\n1. Medarbejder\n2. Gæst");
             try
             {
                 valgafmenu = int.Parse(Console.ReadLine());
@@ -33,11 +33,14 @@ class Program
                         break;
                 }
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
-                Console.Clear();
-                Console.WriteLine("Vælg et korrekt tal.");
-                Thread.Sleep(2000);
+                if (ex is FormatException || ex is OverflowException)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Vælg et korrekt tal.\n\n(Tryk enter for at gå tilbage)");
+                    Console.Read();
+                }
             }
         }
     }

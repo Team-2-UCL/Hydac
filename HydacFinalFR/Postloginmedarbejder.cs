@@ -4,97 +4,98 @@ namespace HydacFinalFR
 	public class Postloginmedarbejder
 	{
         // Variabler
-        private bool postloginmenu = true;
-        private int valgafmenu;
-        private List<string> nuvmedarbejdere = new List<string> { };
-        private List<string> nuvpause = new List<string> { };
-        private bool clockedind;
-        private bool tilpause;
-        private string clockindellerud;
+        private bool postLoginMenu = true;
+        private int valgAfMenu;
+        private List<string> nuvMedarbejdere = new List<string> { };
+        private List<string> nuvPause = new List<string> { };
+        private bool clockedInd;
+        private bool tilPause;
+        private string clockIndEllerUd;
         private string humør;
         private int count;
-        private int countpause;
-        private string logbesked;
+        private int countPause;
+        private string logBesked;
 
         // Initialiseringer
         Log medarbejderlog = new Log();
 
-        public void Medarbejdermenu(string medarbejdernavn)
+        public void Medarbejdermenu(string medarbejderNavn)
         {
             // Variabler
-            postloginmenu = true;
+            postLoginMenu = true;
 
-            while (postloginmenu == true)
+            while (postLoginMenu == true)
             {
                 count = 0;
-                clockedind = false;
-                foreach (var medarbejder in nuvmedarbejdere)
+                clockedInd = false;
+                foreach (var medarbejder in nuvMedarbejdere)
                 {
-                    if (medarbejder == medarbejdernavn)
+                    if (medarbejder == medarbejderNavn)
                     {
-                        clockedind = true;
+                        clockedInd = true;
                         break;
                     }
                     count++;
                 }
-                countpause = 0;
-                tilpause = false;
-                foreach (var medarbejder in nuvpause)
+                countPause = 0;
+                tilPause = false;
+                foreach (var medarbejder in nuvPause)
                 {
-                    if (medarbejder == medarbejdernavn)
+                    if (medarbejder == medarbejderNavn)
                     {
-                        tilpause = true;
+                        tilPause = true;
                         break;
                     }
-                    countpause++;
+                    countPause++;
                 }
                 Console.Clear();
-                Console.WriteLine($"Velkommen: {medarbejdernavn} - Vælg hvad du vil\n\n1. Clock ind/ud\n2. Registrer pause\n3. Se loggen\n4. Log af");
+                Console.WriteLine($"Velkommen: {medarbejderNavn} - Vælg hvad du vil\n\n1. Clock ind/ud\n2. Registrer pause\n3. Se loggen\n4. Log af");
                 try
                 {
-                    valgafmenu = int.Parse(Console.ReadLine());
-                    switch (valgafmenu)
+                    valgAfMenu = int.Parse(Console.ReadLine());
+                    switch (valgAfMenu)
                     {
                         case 1:
-                            if (tilpause == false)
+                            if (tilPause == false)
                             {
-                                if (clockedind == true)
+                                if (clockedInd == true)
                                 {
                                     Console.Clear();
-                                    Console.WriteLine("REGISTRER AFGANG\n\nBekræft med at taste y eller tryk enter for at afbrude");
-                                    clockindellerud = Console.ReadLine();
-                                    switch (clockindellerud)
+                                    Console.WriteLine("REGISTRER AFGANG\n\nBekræft med at taste y eller tryk enter for at afbryde");
+                                    clockIndEllerUd = Console.ReadLine();
+                                    switch (clockIndEllerUd)
                                     {
                                         case "y":
                                             Console.Clear();
-                                            nuvmedarbejdere.RemoveAt(count);
-                                            Console.WriteLine($"Afgangen for {medarbejdernavn} er blevet registreret.\n\n(Tryk enter for at gå tilbage)");
-                                            logbesked = $"{medarbejdernavn} har meldt sin afgang.";
-                                            medarbejderlog.Gemtillog(logbesked);
+                                            nuvMedarbejdere.RemoveAt(count);
+                                            Console.WriteLine($"Afgangen for {medarbejderNavn} er blevet registreret.\n\n(Tryk enter for at gå tilbage)");
+                                            logBesked = $"{medarbejderNavn} har meldt sin afgang.";
+                                            medarbejderlog.Gemtillog(logBesked);
                                             Console.Read();
                                             break;
                                         default:
                                             break;
                                     }
+                                    break;
                                 }
                                 else
                                 {
                                     Console.Clear();
-                                    Console.WriteLine("REGISTRER ANKOMST\n\nBekræft med at taste y eller tryk enter for at afbrude");
-                                    clockindellerud = Console.ReadLine();
-                                    switch (clockindellerud)
+                                    Console.WriteLine("REGISTRER ANKOMST\n\nBekræft med at taste y eller tryk enter for at afbryde");
+                                    clockIndEllerUd = Console.ReadLine();
+                                    switch (clockIndEllerUd)
                                     {
                                         case "y":
                                             Console.Clear();
-                                            Console.WriteLine("REGISTER ANKOMST\n\nVælg dit humør: 1. :) 2. :| 3. :(");
+                                            Console.WriteLine("REGISTRER ANKOMST\n\nVælg dit humør: 1. :) 2. :| 3. :(");
                                             humør = Console.ReadLine();
                                             if (humør == "1" | humør == "2" | humør == "3")
                                             {
                                                 Console.Clear();
-                                                Console.WriteLine($"Ankomsten for {medarbejdernavn} er blevet registreret.\n\n(Tryk enter for at gå tilbage)");
-                                                logbesked = $"{medarbejdernavn} er mødt ind. Humør: {humør}.";
-                                                medarbejderlog.Gemtillog(logbesked);
-                                                nuvmedarbejdere.Add(medarbejdernavn);
+                                                Console.WriteLine($"Ankomsten for {medarbejderNavn} er blevet registreret.\n\n(Tryk enter for at gå tilbage)");
+                                                logBesked = $"{medarbejderNavn} er mødt ind. Humør: {humør}.";
+                                                medarbejderlog.Gemtillog(logBesked);
+                                                nuvMedarbejdere.Add(medarbejderNavn);
                                                 Console.Read();
                                                 break;
                                             }
@@ -119,23 +120,25 @@ namespace HydacFinalFR
                                 break;
                             }
                         case 2:
-                            if (clockedind == true)
+                            if (clockedInd == true)
                             {
-                                switch (tilpause)
+                                switch (tilPause)
                                 {
                                     case false:
                                         Console.Clear();
-                                        Console.WriteLine("REGISTRER PAUSE\n\nBekræft med at taste y eller tryk enter for at afbrude");
-                                        clockindellerud = Console.ReadLine();
-                                        switch (clockindellerud)
+                                        Console.WriteLine("REGISTRER PAUSE\n\nBekræft med at taste y eller tryk enter for at afbryde");
+                                        clockIndEllerUd = Console.ReadLine();
+                                        switch (clockIndEllerUd)
                                         {
                                             case "y":
                                                 Console.Clear();
                                                 Console.WriteLine("Starttidspunktet på din pause er registreret, god pause!\n\n(Tryk enter for at gå tilbage)");
-                                                logbesked = $"{medarbejdernavn} er gået til pause.";
-                                                nuvpause.Add(medarbejdernavn);
-                                                medarbejderlog.Gemtillog(logbesked);
+                                                logBesked = $"{medarbejderNavn} er gået til pause.";
+                                                nuvPause.Add(medarbejderNavn);
+                                                medarbejderlog.Gemtillog(logBesked);
                                                 Console.Read();
+                                                break;
+                                            case "":
                                                 break;
                                             default:
                                                 Console.Clear();
@@ -146,17 +149,19 @@ namespace HydacFinalFR
                                         break;
                                     case true:
                                         Console.Clear();
-                                        Console.WriteLine("AFSLUT PAUSE\n\nBekræft med at taste y eller tryk enter for at afbrude");
-                                        clockindellerud = Console.ReadLine();
-                                        switch (clockindellerud)
+                                        Console.WriteLine("AFSLUT PAUSE\n\nBekræft med at taste y eller tryk enter for at afbryde");
+                                        clockIndEllerUd = Console.ReadLine();
+                                        switch (clockIndEllerUd)
                                         {
                                             case "y":
                                                 Console.Clear();
                                                 Console.WriteLine("Sluttidspunktet på din pause er registreret, god arbejdslyst!\n\n(Tryk enter for at gå tilbage)");
-                                                logbesked = $"{medarbejdernavn} er vendt tilbage fra pause.";
-                                                nuvpause.RemoveAt(countpause);
-                                                medarbejderlog.Gemtillog(logbesked);
+                                                logBesked = $"{medarbejderNavn} er vendt tilbage fra pause.";
+                                                nuvPause.RemoveAt(countPause);
+                                                medarbejderlog.Gemtillog(logBesked);
                                                 Console.Read();
+                                                break;
+                                            case "":
                                                 break;
                                             default:
                                                 Console.Clear();
@@ -178,19 +183,25 @@ namespace HydacFinalFR
 
                         case 3:
                             Console.Clear();
-                            logbesked = medarbejderlog.Hentloggen();
-                            Console.WriteLine(logbesked);
+                            logBesked = medarbejderlog.Hentloggen();
+                            Console.WriteLine(logBesked);
                             Console.Read();
                             break;
                         case 4:
-                            postloginmenu = false;
+                            postLoginMenu = false;
                             break;
                         default:
                             break;
                     }
                 }
-                catch (FormatException)
+                catch (Exception ex)
                 {
+                    if (ex is FormatException || ex is OverflowException)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Vælg et korrekt tal.\n\n(Tryk enter for at gå tilbage)");
+                        Console.Read();
+                    }
                 }
             }
         }

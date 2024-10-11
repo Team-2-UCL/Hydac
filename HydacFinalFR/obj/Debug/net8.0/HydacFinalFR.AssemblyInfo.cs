@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HydacFinalFR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8e88bbdb31643cf242284e74da1b91ec08c7df0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bffc415d5d258f8583f47e1ef93f2c98d918089")]
 [assembly: System.Reflection.AssemblyProductAttribute("HydacFinalFR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HydacFinalFR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

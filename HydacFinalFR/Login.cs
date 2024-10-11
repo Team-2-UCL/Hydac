@@ -3,9 +3,9 @@ namespace HydacFinalFR
 {
 	public class Login
 	{
-        private int medarbejderid;
-		private bool loginmenu = true;
-        private string medarbejdernavn = "";
+        private int medarbejderId;
+		private bool loginMenu = true;
+        private string medarbejderNavn = "";
 
 		// Initialiseringer
 		Postloginmedarbejder medarbejdermenu = new Postloginmedarbejder();
@@ -13,60 +13,63 @@ namespace HydacFinalFR
 		public void Medarbejdermenulogin()
 		{
 
-            loginmenu = true;
-			while (loginmenu == true)
+            loginMenu = true;
+			while (loginMenu == true)
 			{
                 Console.Clear();
-                Console.WriteLine("Medarbejder login\n\nIndtast dit medarbejder ID...\n\n(Tast 0 for at gå tilbage)");
+                Console.WriteLine("MEDARBEJDERLOGIN\n\nIndtast dit medarbejderID...\n\n(Tast 0 for at gå tilbage)");
 				try
 				{
-					medarbejderid = int.Parse(Console.ReadLine());
-					if (medarbejderid == 0)
+					medarbejderId = int.Parse(Console.ReadLine());
+					if (medarbejderId == 0)
 					{
-						loginmenu = false;
+						loginMenu = false;
 					}
 					else
 					{
-                        medarbejdernavn = Medarbejderlogin(medarbejderid);
-                        if (medarbejdernavn == "")
+                        medarbejderNavn = Medarbejderlogin(medarbejderId);
+                        if (medarbejderNavn == "")
                         {
                             Console.Clear();
-                            Console.WriteLine("Ugyldigt id, prøv igen...");
-                            Thread.Sleep(2000);
+                            Console.WriteLine("Ugyldigt ID, prøv igen...\n\n(Tryk enter for at gå tilbage)");
+							Console.Read();
                         }
 						else
 						{
-							medarbejdermenu.Medarbejdermenu(medarbejdernavn);
-							loginmenu = false;
+							medarbejdermenu.Medarbejdermenu(medarbejderNavn);
+							loginMenu = false;
 						}
                     }
 				}
-				catch (FormatException)
-				{
-					Console.Clear();
-					Console.WriteLine("Ugyldigt id, prøv igen...");
-					Thread.Sleep(2000);
-				}
+                catch (Exception ex)
+                {
+                    if (ex is FormatException || ex is OverflowException)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Vælg et korrekt tal.\n\n(Tryk enter for at gå tilbage)");
+                        Console.Read();
+                    }
+                }
             }
 		}
-		private string Medarbejderlogin(int medarbejderid)
+		private string Medarbejderlogin(int medarbejderId)
 		{
-			switch (medarbejderid)
+			switch (medarbejderId)
 			{
 				case 123:
-					medarbejdernavn = "John Johnson";
+					medarbejderNavn = "John Johnson";
 					break;
 				case 321:
-					medarbejdernavn = "Peter Petersen";
+					medarbejderNavn = "Peter Petersen";
 					break;
 				case 222:
-					medarbejdernavn = "Lars Larsen";
+					medarbejderNavn = "Lars Larsen";
 					break;
 				default:
-					medarbejdernavn = "";
+					medarbejderNavn = "";
 					break;
 			}
-			return medarbejdernavn;
+			return medarbejderNavn;
 		}
 	}
 }
